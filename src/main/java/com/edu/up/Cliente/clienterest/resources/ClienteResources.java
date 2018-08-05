@@ -21,6 +21,12 @@ public class ClienteResources {
 	@Autowired
 	private ClienteRepository cr;
 	
+	@GetMapping("/teste")
+	public String teste()
+	{
+		return "Hello World";
+	}
+	
 	@GetMapping(produces="application/json")
 	public @ResponseBody Iterable<Cliente> listaClientes()
 	{
